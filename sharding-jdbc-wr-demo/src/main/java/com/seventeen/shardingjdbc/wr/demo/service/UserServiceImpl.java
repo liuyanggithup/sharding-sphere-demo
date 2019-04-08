@@ -8,32 +8,29 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
 /**
- * @author: xia_xun
- * @Date: 2019/4/8
+ * @author: xia_xun @Date: 2019/4/8
  * @description:
  */
 @Service
 public class UserServiceImpl implements UserService {
-	
-	@Resource
-	private UserRepository userRepository;
 
-	@Override
-	public List<User> list() {
+  @Resource private UserRepository userRepository;
 
-		return userRepository.list();
-	}
+  @Override
+  public List<User> list() {
+
+    return userRepository.list();
+  }
 
   @Override
   @HintMaster
   public List<User> users() {
 
-		return userRepository.list();
-	}
+    return userRepository.list();
+  }
 
-	@Override
-	public Long add(User user) {
-		return userRepository.addUser(user);
-	}
-
+  @Override
+  public Long add(User user) {
+    return userRepository.addUser(user);
+  }
 }
