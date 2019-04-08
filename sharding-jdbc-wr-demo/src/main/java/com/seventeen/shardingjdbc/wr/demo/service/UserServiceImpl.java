@@ -3,7 +3,6 @@ package com.seventeen.shardingjdbc.wr.demo.service;
 import com.seventeen.shardingjdbc.wr.demo.annotation.HintMaster;
 import com.seventeen.shardingjdbc.wr.demo.po.User;
 import com.seventeen.shardingjdbc.wr.demo.repository.UserRepository;
-import io.shardingsphere.api.HintManager;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -25,9 +24,9 @@ public class UserServiceImpl implements UserService {
 		return userRepository.list();
 	}
 
-	@Override
-	@HintMaster
-	public List<User> users() {
+  @Override
+  @HintMaster
+  public List<User> users() {
 
 		return userRepository.list();
 	}
