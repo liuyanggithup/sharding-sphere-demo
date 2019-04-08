@@ -17,16 +17,22 @@ public class UserController {
 	private UserService userService;
 	
 	@GetMapping("/users")
+	public Object users() {
+		return userService.users();
+	}
+
+	@GetMapping("/list")
 	public Object list() {
 		return userService.list();
 	}
 	
 	@GetMapping("/add")
-	public Object add() {
+	public Object add(String city,String name) {
+
+
 		User user = new User();
-		user.setId(100L);
-		user.setCity("深圳");
-		user.setName("李四");
+		user.setCity(city);
+		user.setName(name);
 		return userService.add(user);
 	}
 	

@@ -4,14 +4,30 @@ import com.seventeen.shardingjdbc.wr.demo.po.User;
 
 import java.util.List;
 /**
- * @author: xia_xun
- * @Date: 2019/4/8
+ * @author: xia_xun @Date: 2019/4/8
  * @description:
  */
 public interface UserService {
 
-	List<User> list();
-	
-	Long add(User user);
-	
+  /**
+   * 读从库
+   *
+   * @return
+   */
+  List<User> list();
+
+  /**
+   * 强制读主库
+   *
+   * @return
+   */
+  List<User> users();
+
+  /**
+   * 新增方法
+   *
+   * @param user
+   * @return
+   */
+  Long add(User user);
 }
