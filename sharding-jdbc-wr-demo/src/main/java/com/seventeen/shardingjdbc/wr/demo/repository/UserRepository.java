@@ -12,6 +12,8 @@ public interface UserRepository {
 
     Long addUser(User user);
 
+    User getById(Long id);
+
     List<User> list();
 
 }

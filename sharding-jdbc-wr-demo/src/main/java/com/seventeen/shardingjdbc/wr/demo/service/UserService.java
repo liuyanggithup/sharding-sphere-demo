@@ -24,6 +24,14 @@ public interface UserService {
   List<User> users();
 
   /**
+   * 测试重试读主
+   *
+   * @param id
+   * @return
+   */
+  User getById(Long id);
+
+  /**
    * 新增方法
    *
    * @param user

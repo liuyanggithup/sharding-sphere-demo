@@ -21,6 +21,12 @@ public class UserController {
 		return userService.users();
 	}
 
+
+	@GetMapping("/user")
+	public Object users(Long id) {
+		return userService.getById(id);
+	}
+
 	@GetMapping("/list")
 	public Object list() {
 		return userService.list();

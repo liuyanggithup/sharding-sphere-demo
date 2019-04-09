@@ -28,6 +28,12 @@ public class UserServiceImpl implements UserService {
 
     return userRepository.list();
   }
+  @HintMaster
+  @Override
+  public User getById(Long id) {
+
+    return userRepository.getById(id);
+  }
 
   @Override
   public Long add(User user) {
