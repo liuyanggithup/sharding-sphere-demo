@@ -11,7 +11,7 @@
 
     <modules>
         <module>sharding-jdbc-wr-demo</module>
-        <module>sharding-jdbc-wr-java-demo</module>
+        <module>sharding-jdbc-mod-demo</module>
     </modules>
 
 </project>
