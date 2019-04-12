@@ -1,6 +1,5 @@
 package com.seventeen.biz.service.impl;
 
-import com.seventeen.annotation.HintMaster;
 import com.seventeen.biz.dao.UserDAO;
 import com.seventeen.biz.service.UserService;
 import com.seventeen.component.ComponentLocator;
@@ -30,17 +29,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @HintMaster
     @Transactional(rollbackFor = Exception.class)
     public List<UserBO> users() {
-
-        //测试事务
-//        userDAO.list();
-//        UserBO userBO = new UserBO();
-//        userBO.setCity("杭州");
-//        userBO.setName("水镜");
-//        add(userBO);
-//        int i = 1/0;
         return ComponentLocator.getConvertor().convertList(userDAO.list(), UserBO.class);
     }
 

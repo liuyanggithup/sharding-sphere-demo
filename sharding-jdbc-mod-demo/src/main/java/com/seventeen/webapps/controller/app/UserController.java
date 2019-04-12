@@ -42,9 +42,10 @@ public class UserController {
     }
 
     @GetMapping("/add")
-    public Object add(String city, String name) {
+    public Object add(Long id,String city, String name) {
 
         UserBO userBO = new UserBO();
+        userBO.setId(id);
         userBO.setCity(city);
         userBO.setName(name);
         return userService.add(userBO);
